@@ -1,0 +1,40 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.3'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.hackathon'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//implementation group: 'com.microsoft.cognitiveservices.speech', name: 'client-sdk', version: '1.36.0'
+	// https://mvnrepository.com/artifact/com.microsoft.cognitiveservices.speech/client-jar-sdk
+	implementation group: 'com.microsoft.cognitiveservices.speech', name: 'client-jar-sdk', version: '1.14.0'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.2.2'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '0.11.0'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.h2database:h2'
+	// https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+	implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.7.2'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
