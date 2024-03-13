@@ -31,7 +31,7 @@ public class SpeakerIdentificationController {
         userDetails.setFirstName(firstName);
         userDetails.setLastName(lastName);
         userDetails.setProfileId(null);
-        azureService.createUserProfile(userDetails);
+        azureService.createUserProfile(userDetails, audioFile);
         azureService.getUserProfile(1);
         return new ResponseEntity<>(true, HttpStatus.OK);
     }
