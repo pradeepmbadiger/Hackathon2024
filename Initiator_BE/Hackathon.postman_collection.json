@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "213c5f82-f51c-4171-a608-13c396ab1a30",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33502022"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/enrollUserProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Agraj",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Badiger",
+							"type": "text"
+						},
+						{
+							"key": "audioFile",
+							"type": "file",
+							"src": "myVoiceIsMyPassportVerifyMe01.wav"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/enrollUserProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"enrollUserProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/identifyUserVoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "fd",
+							"type": "text"
+						},
+						{
+							"key": "audioFile",
+							"type": "file",
+							"src": "myVoiceIsMyPassportVerifyMe01.wav"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/identifyUserVoice",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"identifyUserVoice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
